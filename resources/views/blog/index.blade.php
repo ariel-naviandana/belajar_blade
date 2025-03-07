@@ -15,4 +15,13 @@
         <h3>Blog Post Judul 2</h3>
         <p>Curabitur tincidunt, ligula eu dictum vulputate, magna nulla luctus enim, at aliquet justo turpis in nulla.</p>
     </article>
+
+    <h3>{{ $title }}</h3>
+    <p>Berikut adalah daftar penulis yang ada di blog ini:</p>
+
+    <ul>
+        @foreach ($penulis as $p)
+            <li>{{ "Nama : ". $p->nama ." | Alamat : ". $p->alamat}}</li>
+        @endforeach
+    </ul>
 @endsection
